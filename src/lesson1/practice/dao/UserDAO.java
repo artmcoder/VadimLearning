@@ -16,6 +16,8 @@ public class UserDAO {
         return true;
     }
 
+
+
     public User[] users() {
         return usersDb;
     }
@@ -28,5 +30,26 @@ public class UserDAO {
             }
         }
         return true;
+    }
+
+    public boolean loginUser(String login, String password) {
+        User user = findUserByUsername(login);
+        if (user != null) {
+            if (user.getPassword().equals(password)) {
+                return true;
+            } else {
+                return false;
+            }
+        } else return false;
+    }
+
+    private User findUserByUsername(String login) {
+        for (User u : usersDb) {
+            if (u == null) break;
+            if (u.getLogin().equals(login)) {
+                return u;
+            }
+        }
+       return null;
     }
 }
