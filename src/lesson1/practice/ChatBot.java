@@ -29,7 +29,8 @@ public class ChatBot {
                     if (!userDAO.loginUser(loginFromLogin, passwordFromLogin)) {
                         System.out.println("-- Логин или пароль являются неверными");
                     } else {
-                        System.out.println("-- Пользователь " + loginFromLogin + " успешно авторизирован");
+                        System.out.println("-- Пользователь " + loginFromLogin +
+                                " успешно авторизирован");
                     }
                     break;
                 case ANSWER_TO_REGISTRATION:

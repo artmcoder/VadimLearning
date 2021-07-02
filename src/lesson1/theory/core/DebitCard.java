@@ -6,9 +6,7 @@ public class DebitCard extends Card {
     }
 
     public void putMoneyOnTheCard(int money) {
-        int commission = money * 2 / 100;
-        money = money - commission;
-        deposit += money;
+        deposit += getMoneyWithoutCommission(money);
     }
 
     public void withdrawMoneyFromTheCard(int money) {
