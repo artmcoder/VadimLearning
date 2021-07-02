@@ -1,6 +1,7 @@
 package lesson1.practice;
 
 import lesson1.practice.dao.UserDAO;
+import lesson1.practice.dao.UserDAOImpl;
 import lesson1.practice.models.User;
 
 import java.util.Scanner;
@@ -11,7 +12,7 @@ public class ChatBot {
     private final static String ANSWER_TO_SHOW_DB = "база данных";
 
     public static void main(String[] args) {
-        UserDAO userDAO = new UserDAO();
+        UserDAO userDAO = new UserDAOImpl();
         Scanner scanner = new Scanner(System.in);
         System.out.println("-- Чтобы войти в личный кабинет, напишите " +
                 "'логин'.\n-- Чтобы зарегистрироваться напишите 'регистрация'" +

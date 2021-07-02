@@ -1,6 +1,6 @@
 package lesson1.theory.core;
 
-public class Card {
+public abstract class Card {
     public int deposit;
 
     public Card(int deposit) {
@@ -16,4 +16,8 @@ public class Card {
         money = money - commission;
         return money;
     }
+
+    public abstract void withdrawMoneyFromTheCard(int money);
+
+    public abstract void putMoneyOnTheCard(int money);
 }
