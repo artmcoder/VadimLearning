@@ -3,7 +3,7 @@ package lesson1.practice.dao;
 import lesson1.practice.models.User;
 
 public class UserDAOImpl implements UserDAO {
-    private User[] usersDb = new User[100];
+    private User[] usersDb = new User[2];
     private static int USER_ID = -1;
 
     @Override
