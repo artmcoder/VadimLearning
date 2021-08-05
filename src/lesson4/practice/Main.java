@@ -16,6 +16,7 @@ public class Main {
 
     private static void searchImagesFromPc(File rootFile,
                                            List<File> images) {
+        // rekursion
         if (rootFile.isDirectory()) {
             File[] files = rootFile.listFiles();
             if (files != null) {
